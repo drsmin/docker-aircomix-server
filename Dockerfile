@@ -33,6 +33,7 @@ RUN a2ensite comix
 RUN a2enmod rewrite
 
 # 5. 초기실행
+VOLUME ["/data/manga"]
 ENV PASSWORD 1234
 EXPOSE 31257
 ENTRYPOINT /docker-entrypoint.sh

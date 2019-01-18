@@ -1,6 +1,5 @@
-#! /bin/bash
+#! /bin/sh
 
 htpasswd -bcm /data/.htpasswd AirComix ${PASSWORD}
-service apache2 start
 
-exec /bin/bash
+exec /usr/sbin/httpd -D FOREGROUND -f /etc/apache2/httpd.conf
